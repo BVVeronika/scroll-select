@@ -16,7 +16,7 @@ function Select(el, opt) {
   if (!(this instanceof Select)) return new Select(el)
   var container = this.container = create('div', 'scroll-select-container')
   el.appendChild(this.container)
-  this.rowHeight = opt.rowHeight || 30
+  this.rowHeight = opt.rowHeight || 40
   var data = opt.data || []
   var main = create('div')
   container.appendChild(main)
@@ -48,7 +48,7 @@ Select.prototype.setData = function (data) {
   for (var i = 0, l = data.length; i < l; i++) {
     var o = data[i]
     var el = domify('<li class="scroll-select-item" data-index="' +
-         i + '">' + o.text + '</li>')
+         i + '"><img src="' + o.img + '""><span class="text">' + o.text + '<span/></li>')
     fragment.appendChild(el)
   }
   parentNode.appendChild(fragment)
