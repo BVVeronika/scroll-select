@@ -16,7 +16,7 @@ function Select(el, opt) {
   if (!(this instanceof Select)) return new Select(el)
   var container = this.container = create('div', 'scroll-select-container')
   el.appendChild(this.container)
-  this.rowHeight = opt.rowHeight || 40
+  this.rowHeight = opt.rowHeight || 50
   var data = opt.data || []
   var main = create('div')
   container.appendChild(main)
